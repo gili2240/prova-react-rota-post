@@ -5,13 +5,16 @@ import PostDetails from "./PostDetails";
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/post" element={<PostList />} />
-        <Route path="/dados/:id" element={<PostDetails />} />
-      </Routes>
+      <div style={{ padding: 20 }}>
+        <Routes>
+          <Route path="/post" element={<PostList />} />
+          <Route path="/dados/:id" element={<PostDetails />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }
 
 export default App;
+
 
