@@ -1,6 +1,6 @@
- import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Typography } from "@mui/material";
+import { Typography, Paper } from "@mui/material";
 
 function PostDetails() {
   const { id } = useParams();
@@ -15,12 +15,13 @@ function PostDetails() {
   if (!post) return <div>Carregando...</div>;
 
   return (
-    <div>
-      <Typography variant="h4">{post.title}</Typography>
+    <Paper sx={{ p: 3 }}>
+      <Typography variant="h4" sx={{ color: "red", mb: 2 }}>
+        {post.title}
+      </Typography>
       <Typography variant="body1">{post.body}</Typography>
-    </div>
+    </Paper>
   );
 }
 
 export default PostDetails;
-
